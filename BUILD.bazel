@@ -1,0 +1,16 @@
+config_setting(
+  name = "windows",
+  values = {
+    "cpu": "x64_windows",
+  },
+)
+
+cc_library(
+  name = "tiny-process-library",
+  hdrs = ["process.hpp"],
+  srcs = ["process.cpp"] + select({
+    "//:windows": ["process_win.cpp"],
+    "//conditions:default": ["process_unix.cpp"],
+  }),
+  visibility = ["//visibility:public"],
+)

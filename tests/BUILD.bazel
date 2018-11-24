@@ -1,0 +1,17 @@
+cc_test(
+  name = "io_test",
+  srcs = ["io_test.cpp"],
+  deps = ["//:tiny-process-library"],
+)
+
+cc_test(
+  name = "multithread_test",
+  srcs = ["multithread_test.cpp"],
+  deps = ["//:tiny-process-library"],
+)
+
+cc_test(
+  name = "open_close_test",
+  srcs = ["open_close_test.cpp"],
+  deps = ["//:tiny-process-library"],
+)

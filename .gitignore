@@ -45,3 +45,6 @@ io_test
 
 # Commonly used build directory
 build
+
+# Added by bazelregistry
+/bazel-*
